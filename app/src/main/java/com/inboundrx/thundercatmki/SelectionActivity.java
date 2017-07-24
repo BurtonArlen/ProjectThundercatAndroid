@@ -60,25 +60,57 @@ public class SelectionActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void openAnimation1(){
-        mMapDemoButton.animate().translationY(3000).setDuration(1);
-        mRewardDemoButton.animate().translationY(3000).setDuration(1);
-        mUserDemoButton.animate().translationY(3000).setDuration(1);
+        mMapDemoButton.animate().translationY(3000).translationX(0).setDuration(1);
+        mRewardDemoButton.animate().translationY(3000).translationX(0).setDuration(1);
+        mUserDemoButton.animate().translationY(3000).translationX(0).setDuration(1);
         openAnimation2();
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        openAnimation1();
     }
 
     @Override
     public void onClick(View v){
         if (v == mMapDemoButton){
-            Intent intent = new Intent(SelectionActivity.this, MapActivity.class);
-            startActivity(intent);
+            mMapDemoButton.animate().translationX(-1000).setDuration(600);
+            mRewardDemoButton.animate().translationX(1000).setDuration(600);
+            mUserDemoButton.animate().translationX(-1000).setDuration(600);
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(SelectionActivity.this, MapActivity.class);
+                    startActivity(intent);
+                }
+            }, 600);
         }
         if (v == mRewardDemoButton){
-            Intent intent = new Intent(SelectionActivity.this, DurationRewardActivity.class);
-            startActivity(intent);
+            mMapDemoButton.animate().translationX(-1000).setDuration(600);
+            mRewardDemoButton.animate().translationX(1000).setDuration(600);
+            mUserDemoButton.animate().translationX(-1000).setDuration(600);
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(SelectionActivity.this, DurationRewardActivity.class);
+                    startActivity(intent);
+                }
+            }, 600);
         }
-        if (v == mMapDemoButton){
-            Intent intent = new Intent(SelectionActivity.this, ProfileActivity.class);
-            startActivity(intent);
+        if (v == mUserDemoButton){
+            mMapDemoButton.animate().translationX(-1000).setDuration(600);
+            mRewardDemoButton.animate().translationX(1000).setDuration(600);
+            mUserDemoButton.animate().translationX(-1000).setDuration(600);
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(SelectionActivity.this, ProfileActivity.class);
+                    startActivity(intent);
+                }
+            }, 600);
         }
     }
 }
