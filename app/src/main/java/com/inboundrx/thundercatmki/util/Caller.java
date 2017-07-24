@@ -1,5 +1,6 @@
 package com.inboundrx.thundercatmki.util;
 
+import com.inboundrx.thundercatmki.DurationRewardActivity;
 import com.inboundrx.thundercatmki.MainActivity;
 
 /**
@@ -13,6 +14,11 @@ public class Caller {
     public static void main(String[] args) {
         Caller caller = new Caller();
         BeaconCallback callBack = new MainActivity();
+        caller.register(callBack);
+    }
+    public static void trackerMain(String[] args) {
+        Caller caller = new Caller();
+        BeaconCallback callBack = new DurationRewardActivity();
         caller.register(callBack);
     }
 }
