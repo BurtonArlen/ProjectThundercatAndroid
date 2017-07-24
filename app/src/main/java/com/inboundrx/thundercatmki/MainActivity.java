@@ -7,15 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
-import com.estimote.sdk.BeaconManager;
-import com.estimote.sdk.Region;
 import com.estimote.sdk.SystemRequirementsChecker;
 import com.inboundrx.thundercatmki.BeaconManagers.BeaconRangingManager;
 import com.inboundrx.thundercatmki.util.BeaconCallback;
-
-import java.util.concurrent.TimeUnit;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -23,8 +17,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.learnMoreButton) Button mLearnMoreButton;
     @Bind(R.id.landingLogo) ImageView mLandingLogo;
     private BeaconRangingManager beaconFinder = new BeaconRangingManager();
-    private BeaconManager beaconManager;
-    private Region region;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void beaconCallBack() {
         System.out.println("I've been called back");
     }
-
 
     private void openAnimationLogo(){
         mLandingLogo.animate().setDuration(2000).alpha(1f);
@@ -73,6 +64,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onResume();
         beaconFinder.beaconResume();
         SystemRequirementsChecker.checkWithDefaultDialogs(this);
-
     }
 }

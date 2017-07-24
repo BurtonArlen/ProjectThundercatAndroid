@@ -74,8 +74,8 @@ public class SelectionActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v){
         if (v == mMapDemoButton){
-            mMapDemoButton.animate().translationX(-1000).setDuration(600);
-            mRewardDemoButton.animate().translationX(1000).setDuration(600);
+            mMapDemoButton.animate().translationX(1000).setDuration(600);
+            mRewardDemoButton.animate().translationX(-1000).setDuration(600);
             mUserDemoButton.animate().translationX(-1000).setDuration(600);
             final Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -101,8 +101,8 @@ public class SelectionActivity extends AppCompatActivity implements View.OnClick
         }
         if (v == mUserDemoButton){
             mMapDemoButton.animate().translationX(-1000).setDuration(600);
-            mRewardDemoButton.animate().translationX(1000).setDuration(600);
-            mUserDemoButton.animate().translationX(-1000).setDuration(600);
+            mRewardDemoButton.animate().translationX(-1000).setDuration(600);
+            mUserDemoButton.animate().translationX(1000).setDuration(600);
             final Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
