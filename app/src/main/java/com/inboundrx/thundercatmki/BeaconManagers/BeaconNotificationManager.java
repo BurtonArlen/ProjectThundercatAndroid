@@ -1,4 +1,4 @@
-package com.inboundrx.thundercatmki;
+package com.inboundrx.thundercatmki.BeaconManagers;
 
 import android.app.Application;
 import android.app.Notification;
@@ -10,6 +10,8 @@ import android.content.Intent;
 import com.estimote.sdk.Beacon;
 import com.estimote.sdk.BeaconManager;
 import com.estimote.sdk.Region;
+import com.inboundrx.thundercatmki.Constants;
+import com.inboundrx.thundercatmki.MainActivity;
 
 import java.util.List;
 import java.util.UUID;
