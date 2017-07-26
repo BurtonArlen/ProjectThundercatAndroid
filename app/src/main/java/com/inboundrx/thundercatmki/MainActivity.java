@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v){
         if (v == mLearnMoreButton){
-            Intent intent = new Intent(MainActivity.this, SelectionActivity.class);
+            Intent intent = new Intent(MainActivity.this, GoogleSignInActivity.class);
             startActivity(intent);
         }
     }

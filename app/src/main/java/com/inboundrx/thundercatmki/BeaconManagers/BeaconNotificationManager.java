@@ -6,10 +6,12 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.estimote.sdk.Beacon;
 import com.estimote.sdk.BeaconManager;
 import com.estimote.sdk.Region;
+import com.estimote.sdk.repackaged.retrofit_v1_9_0.retrofit.RestAdapter;
 import com.inboundrx.thundercatmki.Constants;
 import com.inboundrx.thundercatmki.MainActivity;
 
@@ -48,6 +50,7 @@ public class BeaconNotificationManager extends Application {
         beaconManager.setMonitoringListener(new BeaconManager.MonitoringListener() {
             @Override
             public void onEnteredRegion(Region region, List<Beacon> list) {
+                Log.d("logging region", Constants.BEACON_UUID);
                 showNotification(
                         "Welcome to the Byteshift Demo", "Tap the notification to continue");
             }

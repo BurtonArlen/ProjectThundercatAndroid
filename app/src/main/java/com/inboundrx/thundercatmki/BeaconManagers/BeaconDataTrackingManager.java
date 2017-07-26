@@ -26,6 +26,7 @@ public class BeaconDataTrackingManager{
         beaconManager.setRangingListener(new BeaconManager.RangingListener() {
             @Override
             public void onBeaconsDiscovered(Region region, List<Beacon> list) {
+                Log.d("logging Data tracker", Constants.BEACON_UUID);
                 if (!list.isEmpty()) {
                     final String[] beacons = new String[]{"Found Beacon"};
                     Log.d("Demo App: ", Constants.BEACON_UUID);
