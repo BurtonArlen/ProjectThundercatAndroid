@@ -27,8 +27,8 @@ public class BeaconRangingManager {
             public void onBeaconsDiscovered(Region region, List<Beacon> list) {
                 if (!list.isEmpty()) {
                     Log.d("logging range", Constants.BEACON_UUID);
-                    final String[] beacons = new String[]{"Found Beacon", "No Beacon"};
                     Log.d("Demo App: ", Constants.BEACON_UUID);
+                    final String[] beacons = new String[]{"Found Beacon", "No Beacon"};
                     Caller.main(beacons);
                 }
             }

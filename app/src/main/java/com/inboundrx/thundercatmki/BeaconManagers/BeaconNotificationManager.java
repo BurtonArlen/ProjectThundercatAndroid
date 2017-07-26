@@ -14,6 +14,7 @@ import com.estimote.sdk.Region;
 import com.estimote.sdk.repackaged.retrofit_v1_9_0.retrofit.RestAdapter;
 import com.inboundrx.thundercatmki.Constants;
 import com.inboundrx.thundercatmki.MainActivity;
+import com.inboundrx.thundercatmki.util.Caller;
 
 import java.util.List;
 import java.util.UUID;
@@ -56,6 +57,8 @@ public class BeaconNotificationManager extends Application {
             }
             @Override
             public void onExitedRegion(Region region) {
+                final String[] beacons = new String[]{"Exited Region"};
+                Caller.main(beacons);
             }
         });
 
