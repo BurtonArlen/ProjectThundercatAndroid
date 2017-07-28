@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import com.estimote.sdk.SystemRequirementsChecker;
 import com.inboundrx.thundercatmki.BeaconManagers.BeaconRangingManager;
+import com.inboundrx.thundercatmki.ui.GoogleSignInActivity;
 import com.inboundrx.thundercatmki.util.BeaconCallback;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,8 +29,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         openAnimationLogo();
     }
 
-    public void beaconCallBack() {
-        System.out.println("I've been called back");
+    public void beaconCallBackPositive() {
+        System.out.println("I've been called back +++++");
+    }
+
+    public void beaconCallBackNegative() {
+        System.out.println("I've been called back -----");
     }
 
     private void openAnimationLogo(){

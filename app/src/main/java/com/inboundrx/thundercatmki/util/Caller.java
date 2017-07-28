@@ -1,6 +1,6 @@
 package com.inboundrx.thundercatmki.util;
 
-import com.inboundrx.thundercatmki.DurationRewardActivity;
+import com.inboundrx.thundercatmki.ui.DurationRewardActivity;
 import com.inboundrx.thundercatmki.MainActivity;
 
 /**
@@ -8,17 +8,24 @@ import com.inboundrx.thundercatmki.MainActivity;
  */
 
 public class Caller {
-    private void register(BeaconCallback callback) {
-        callback.beaconCallBack();
+    private void registerIn(BeaconCallback callback) {
+        callback.beaconCallBackPositive();
     }
-    public static void main(String[] args) {
+    private void registerOut(BeaconCallback callback) {
+        callback.beaconCallBackNegative();
+    }
+    public static void main(String args) {
         Caller caller = new Caller();
         BeaconCallback callBack = new MainActivity();
-        caller.register(callBack);
+        caller.registerIn(callBack);
     }
-    public static void trackerMain(String[] args) {
+    public static void trackerMain(String args) {
         Caller caller = new Caller();
         BeaconCallback callBack = new DurationRewardActivity();
-        caller.register(callBack);
+        if (args.equals("Positive")){
+            caller.registerIn(callBack);
+        } else {
+            caller.registerOut(callBack);
+        }
     }
 }

@@ -1,13 +1,15 @@
-package com.inboundrx.thundercatmki;
+package com.inboundrx.thundercatmki.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ProfileActivity extends AppCompatActivity {
+import com.inboundrx.thundercatmki.R;
+
+public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_map);
     }
 }

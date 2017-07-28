@@ -57,7 +57,7 @@ public class BeaconNotificationManager extends Application {
             }
             @Override
             public void onExitedRegion(Region region) {
-                final String[] beacons = new String[]{"Exited Region"};
+                final String beacons = "Exited Region";
                 Caller.main(beacons);
             }
         });

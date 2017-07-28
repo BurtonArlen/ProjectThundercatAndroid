@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.inboundrx.thundercatmki.ui.DurationRewardActivity;
+import com.inboundrx.thundercatmki.ui.MapActivity;
+import com.inboundrx.thundercatmki.ui.ProfileActivity;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 

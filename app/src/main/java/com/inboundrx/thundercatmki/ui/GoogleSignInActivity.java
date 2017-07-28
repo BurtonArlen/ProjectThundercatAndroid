@@ -1,4 +1,4 @@
-package com.inboundrx.thundercatmki;
+package com.inboundrx.thundercatmki.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -22,6 +22,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.inboundrx.thundercatmki.R;
+import com.inboundrx.thundercatmki.SelectionActivity;
 
 public class GoogleSignInActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 

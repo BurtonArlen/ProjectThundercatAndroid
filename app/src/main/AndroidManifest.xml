@@ -26,10 +26,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".SelectionActivity" />
-        <activity android:name=".MapActivity" />
-        <activity android:name=".DurationRewardActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".GoogleSignInActivity"></activity>
+        <activity android:name=".ui.MapActivity" />
+        <activity android:name=".ui.DurationRewardActivity" />
+        <activity android:name=".ui.ProfileActivity" />
+        <activity android:name=".ui.GoogleSignInActivity"></activity>
     </application>
 
 </manifest>

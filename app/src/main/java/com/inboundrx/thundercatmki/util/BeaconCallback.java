@@ -5,5 +5,6 @@ package com.inboundrx.thundercatmki.util;
  */
 
 public interface BeaconCallback {
-    void beaconCallBack();
+    void beaconCallBackPositive();
+    void beaconCallBackNegative();
 }
